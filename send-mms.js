@@ -21,7 +21,7 @@ platform.login({
     const body = {
         from: { phoneNumber: process.env.RINGCENTRAL_USERNAME },
         to: [
-            { phoneNumber: process.env.RINGCENTRAL_RECIPIENT }
+            { phoneNumber: process.env.RECIPIENT_PHONE_NUMBER }
         ],
         text: 'This is a test MMS from Node JS'
     }
