@@ -30,7 +30,7 @@ platform.login({
 
   subscription.on(subscription.events.notification, function(msg){
     if (msg.event.indexOf('/message-store/instant') > -1) {
-      console.log("Received message: " + msg.body.subject)
+      console.log("Received a text message from: " + msg.body.from.phoneNumber)
       var message = 'This is an automatic reply. Thank you for your message!'
       sendReplySMS(message, msg.body.from.phoneNumber)
     }else if (msg.event.indexOf('/voicemail') > -1) {
