@@ -7,7 +7,7 @@
     ul
         li How to send an SMS message.
         li How to send an MMS message
-        li How to track the delivery state of a message.
+        li How to track the delivery status of a message.
         li How to modify the message's read status.
         li How to delete a message.
         li How to receive and reply to an SMS message.
@@ -20,7 +20,7 @@
       li
         a(href="https://ringcentral-tutorials.github.io/sms-api-php-demo/") PHP
       li
-        a(href="https://ringcentral-tutorials.github.io/sms-api-csharo-demo/") C#
+        a(href="https://ringcentral-tutorials.github.io/sms-api-csharp-demo/") C#
       li
         a(href="https://ringcentral-tutorials.github.io/sms-api-python-demo/") Python
 
@@ -34,7 +34,10 @@
       $ cp .env.sample .env
       ```
 
-      Specify your app client id and client secret as well as the account login credentials to the constant defined in the .env file.
+      Specify your app client id and client secret as well as the account login credentials to the constants defined in the .env file.
+
+      ### Important!
+      Your RingCentral app must have the SMS, ReadMessages and EditMessages permissions.
 
   .step(data-title='Sending an SMS', data-file='../send-sms.js')
     :markdown
