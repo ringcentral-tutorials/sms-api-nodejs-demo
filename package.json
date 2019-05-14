@@ -1,0 +1,14 @@
+{
+  "name": "sms-api-nodejs-demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A tutorial to teach users to use RingCentral SMS API.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "form-data": "^2.3.2",
+    "ringcentral": "^3.2.0"
+  }
+}
