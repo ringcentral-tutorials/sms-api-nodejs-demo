@@ -77,7 +77,7 @@
 
       To send an MMS message, we use the `FormData` object to add content attachments to the message.
 
-      Similar to the previous step, we need to login before we move on the send a message.
+      Similar to the previous step, we need to login before we move on to send a message.
 
       First, we define the `body` object, specify the `from`, the `to` and the `text` parameters. Then we append the body to the `FormData`.
 
@@ -126,7 +126,7 @@
 
       Let's create a file named `retrieve-modify.js`.
 
-      Similar to the previous step, we use the SDK to login with the same user before we move on.
+      Similar to the previous step, we use the SDK to login with the same user before we move on to the message store.
 
       To read the metadata of recent messages from the user's message store, we define the `params` object and set the `readStatus` to "Unread" to retrieve only unread messages.
 
@@ -165,7 +165,7 @@
 
       Let's create a file named `receive-reply.js`.
 
-      Similar to the previous step, we use the SDK to login with the same user before we move on.
+      Similar to the previous step, we use the SDK to login with the same user before we move on to subscribe for notifications.
 
       First, we call the `rcsdk.createSubscription()` method to get the `subscription` object.
 
