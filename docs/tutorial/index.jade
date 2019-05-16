@@ -54,7 +54,7 @@
 
       Then, we call the `platform.login()` function to authenticate a user. In this step, we pass the username and password and optionally the extension number.
 
-      After we've logged in successfully, we define the `params` object and specify the `from`, `to` and the `text` message.
+      After we've logged in successfully, we define the `params` variable and specify the `from`, the `to` and the `text` parameters.
 
       Finally, we call the `platform.post('/account/~/extension/~/sms', params)` method to send the message.
 
@@ -80,7 +80,7 @@
 
       Similar to the previous step, we need to login before we move on to send a message.
 
-      First, we define the `body` object, specify the `from`, the `to` and the `text` parameters. Then we append the body to the `FormData`.
+      First, we define the `body` variable, specify the `from`, the `to` and the `text` parameters. Then we append the `body` to the `FormData`.
 
       Then, we load the image and append the image attachment as shown on the right-hand site pane.
 
@@ -127,15 +127,15 @@
 
       Let's create a file named `retrieve-modify.js`.
 
-      Similar to the previous step, we use the SDK to login with the same user before we move on to the message store.
+      Similar to the previous step, we use the SDK to login with the same user before we move on to access the message store.
 
-      To read the metadata of recent messages from the user's message store, we define the `params` object and set the `readStatus` to "Unread" to retrieve only unread messages.
+      To read the metadata of recent messages from the user's message store, we define the `params` variable and set the `readStatus` value to "Unread" to retrieve only unread messages.
 
       Then, we call the `platform.get('/account/~/extension/~/message-store', params)` to read the message store.
 
       We parse the response to get an array of records. We iterate thru the `records` array, read the message id of each message, and use the id to create an endpoint to access that message.
 
-      To change the message `readStatus` to "Read", we set `readStatus` to "Read", then call the `platform.put("/account/~/extension/~/message-store/${record.id}"` to change the `readStatus` of that message.
+      To change the message `readStatus` to "Read", we set the `params.readStatus` value to "Read", then call the `platform.put("/account/~/extension/~/message-store/${record.id}", params)` to change the `readStatus` of that message.
 
       Let's try it out. Go to the Terminal window and run `node retrieve-modify.js`.
 

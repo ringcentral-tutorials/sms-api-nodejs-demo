@@ -24,13 +24,13 @@ platform.login({
       var records = response.json().records
       console.log(`Retrieving a list of ${records.length} messages.`)
       for (var record of records) {
-        platform.put(`/account/~/extension/~/message-store/${record.id}`, {
-          readStatus: 'Read'
-        }).then(response => {
-          console.log(`Message status has been changed to ${response.json().readStatus}`)
-        }).catch(e => {
-          console.error(e)
-        })
+        params.readStatus = "Read"
+        platform.put(`/account/~/extension/~/message-store/${record.id}`, params)
+          .then(response => {
+            console.log(`Message status has been changed to ${response.json().readStatus}`)
+          }).catch(e => {
+            console.error(e)
+          })
       }
     }).catch(e => {
       console.error(e)
