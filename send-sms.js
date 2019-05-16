@@ -25,7 +25,7 @@ platform.login({
   }
   platform.post('/account/~/extension/~/sms', params)
     .then(response => {
-      console.log('SMS sent: ' + response.json().messageStatus)
+      console.log('SMS sent. Delivery status: ' + response.json().messageStatus)
     }).catch(e => {
       console.error(e)
     })

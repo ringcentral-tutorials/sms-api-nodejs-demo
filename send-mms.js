@@ -33,7 +33,7 @@ platform.login({
     platform.post('/account/~/extension/~/sms', formData)
       .then(response => {
         var jsonObj = response.json()
-        console.log('MMS sent. Message status: ' + jsonObj.messageStatus)
+        console.log('MMS sent. Delivery status: ' + jsonObj.messageStatus)
         //track_status(jsonObj.id, jsonObj.messageStatus)
       }).catch(e => {
           console.error(e)
@@ -49,7 +49,7 @@ function track_status(messageId, messageStatus){
           .then(response => {
             messageStatus = response.json().messageStatus
             var jsonObj = response.json()
-            console.log("Message status: " + jsonObj.messageStatus)
+            console.log("MMS message delivery status: " + jsonObj.messageStatus)
             track_status(jsonObj.id, jsonObj.messageStatus)
           })
       }, 1000)
