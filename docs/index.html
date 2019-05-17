@@ -36,7 +36,7 @@ $ npm install --save
 <p>To send an MMS message, we use the <code>FormData</code> object to add content attachments to the message.</p>
 <p>Similar to the previous step, we need to login before we move on to send a message.</p>
 <p>First, we define the <code>body</code> variable, specify the <code>from</code>, the <code>to</code> and the <code>text</code> parameters. Then we append the <code>body</code> to the <code>FormData</code>.</p>
-<p>Then, we load the image and append the image attachment as shown on the right-hand site pane.</p>
+<p>Then, we load the image and append the image attachment as shown on the right-hand side pane.</p>
 <p>Finally, we call the <code>platform.post(&#39;/account/~/extension/~/sms&#39;, formData)</code> method to send the message.</p>
 <p>Let&#39;s try it out. Go to the Terminal window and run <code>node send-mms.js</code>.</p>
 <p>You should see the message delivery status output to the screen, and shortly an MMS will arrive on the recipient&#39;s phone.</p>
